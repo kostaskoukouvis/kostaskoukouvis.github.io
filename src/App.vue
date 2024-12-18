@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import List from './components/List.vue'
 </script>
 
 <template>
-  <main class="p-10">
-    <HelloWorld msg="Vite + Vue" />
+  <main class="container w-3/4 my-10">
+    <List />
   </main>
 </template>
