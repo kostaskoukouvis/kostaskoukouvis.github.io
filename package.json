@@ -17,7 +17,8 @@
     "tailwind-merge": "^2.5.5",
     "tailwindcss": "^3.4.16",
     "tailwindcss-animate": "^1.0.7",
-    "vue": "^3.5.13"
+    "vue": "^3.5.13",
+    "vue3-flag-icons": "^0.0.3"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
