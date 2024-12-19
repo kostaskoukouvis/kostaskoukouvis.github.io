@@ -76,3 +76,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .rating {
+    @apply flex gap-2 cursor-pointer;
+  }
+
+  .star {
+    @apply text-2xl text-gray-400;
+  }
+
+  .star.filled {
+    @apply text-yellow-500;
+  }
+}

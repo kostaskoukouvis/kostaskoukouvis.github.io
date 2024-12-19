@@ -9,6 +9,9 @@ defineProps<{
   title: string
   country: string
   url: string
+  releaseDate: string
+  genre: string
+  duration: string
 }>()
 </script>
 
@@ -28,6 +31,15 @@ defineProps<{
             </div>
             <div class="line-clamp-1 text-xs">
               {{ album }}
+            </div>
+            <div class="text-xs">
+              Release Date: {{ releaseDate }}
+            </div>
+            <div class="text-xs">
+              Genre: {{ genre }}
+            </div>
+            <div class="text-xs">
+              Duration: {{ duration }}
             </div>
           </div>
         </div>
