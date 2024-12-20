@@ -76,3 +76,61 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .responsive-padding {
+    padding: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .responsive-padding {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .responsive-padding {
+      padding: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .responsive-padding {
+      padding: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .responsive-padding {
+      padding: 3rem;
+    }
+  }
+
+  .responsive-margin {
+    margin: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .responsive-margin {
+      margin: 1.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .responsive-margin {
+      margin: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .responsive-margin {
+      margin: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .responsive-margin {
+      margin: 3rem;
+    }
+  }
+}

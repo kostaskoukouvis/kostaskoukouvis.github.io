@@ -36,7 +36,7 @@ if (date > new Date()) {
     <CardContent class="group/item hover:bg-stone-900 p-0" v-if="show">
       <!-- <AccordionItem value="item-1"> -->
       <!-- <AccordionTrigger> -->
-      <div class="flex items-start p-4 cursor-pointer" @click="toggleVideo">
+      <div class="flex items-start p-4 cursor-pointer touch-target" @click="toggleVideo">
         <div class="flex items-start gap-4 text-sm">
           <Avatar>
             <AvatarFallback class="text-lg">
@@ -49,7 +49,7 @@ if (date > new Date()) {
               :alt="artist"
               width="80"
               height="80"
-              class="object-cover transition-all hover:scale-105" />
+              class="object-cover transition-all hover:scale-105 responsive-image" />
           </div>
           <div class="grid gap-1">
             <div class="font-bold text-xl">
@@ -72,7 +72,7 @@ if (date > new Date()) {
       <!-- <AccordionContent> -->
       <div class="flex overflow-auto p-4" v-if="showVideo">
         <iframe
-          class="w-full"
+          class="w-full responsive-iframe"
           height="315"
           :src="url"
           title="YouTube video player"
@@ -118,5 +118,26 @@ if (date > new Date()) {
 .slide-enter-to,
 .slide-leave-from {
   transform: translateY(0);
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.responsive-iframe {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.touch-target {
+  padding: 1rem;
+}
+
+.touch-target:hover,
+.touch-target:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 </style>
