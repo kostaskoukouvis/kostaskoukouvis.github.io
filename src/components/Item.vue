@@ -71,8 +71,18 @@ const toggleVideo = () => {
               width="80"
               height="80"
               class="object-cover transition-all hover:scale-105" />
+            <!-- mobile devices -->
+            <div class="grid gap-1 md:hidden">
+              <div class="font-bold text-xl">
+                {{ album.artist }}
+              </div>
+              <div class="line-clamp-1">
+                {{ album.title }}
+              </div>
+            </div>
           </div>
-          <div class="grid gap-1">
+          <!-- bigger screen -->
+          <div class="md:grid gap-1 hidden">
             <div class="font-bold text-xl">
               {{ album.artist }}
             </div>
