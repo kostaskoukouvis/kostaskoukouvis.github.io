@@ -2,6 +2,9 @@
   "files": [],
   "compilerOptions": {
     "baseUrl": ".",
+    "types": [
+      "unplugin-icons/types/vue"
+    ],
     "paths": {
       "@/*": [
         "./src/*"
