@@ -19,7 +19,6 @@ revealDate.setDate(topRevealDate.getDate() - (props.album.position - 1))
 if (new Date() < revealDate) {
   hideAlbum.value = true
 }
-hideAlbum.value = false
 
 const showVideo = ref(false)
 const toggleVideo = () => {
