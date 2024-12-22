@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { topAlbums } from '@/data'
 import Item from './Item.vue'
 
-const albums = topAlbums[2024].sort((a, b) => a.position - b.position)
+const albums = topAlbums[2024].sort((a, b) => b.position - a.position)
 </script>
 
 <template>

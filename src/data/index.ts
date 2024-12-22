@@ -173,7 +173,7 @@ export const topAlbums: Record<number, Album[]> = {
       track: 'Resilienz',
       country: 'at',
       cover: 'https://www.metal-archives.com/images/1/2/5/6/1256899.jpg?2657',
-      video: '',
+      video: 'kX2Fz56TNsY',
     },
     {
       position: 22,

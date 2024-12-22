@@ -95,11 +95,10 @@ const toggleVideo = () => {
           <Flag :code="album.country" :size="20" circle />
         </div>
       </div>
-      <div class="flex overflow-auto p-4" v-if="showVideo">
+      <div class="flex md:h-[315px] overflow-auto p-4" v-if="showVideo">
         <iframe
           class="w-full responsive-iframe"
-          height="315"
-          :src="'https://www.youtube.com/embed/' + album.video"
+          :src="'https://www.youtube.com/embed/' + album.video + '?autoplay=1'"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
