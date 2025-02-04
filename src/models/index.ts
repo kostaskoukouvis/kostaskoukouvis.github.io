@@ -6,4 +6,5 @@ export interface Album {
   cover: string
   video: string
   track: string
+  year: number
 }

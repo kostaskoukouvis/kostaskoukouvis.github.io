@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
-import { topAlbums } from '@/data'
+import { topAlbums2024 } from '@/data'
 import Item from './Item.vue'
 
-const albums = topAlbums[2024].sort((a, b) => b.position - a.position)
+const albums = topAlbums2024.sort((a, b) => a.position - b.position)
 </script>
 
 <template>
