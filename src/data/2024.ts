@@ -1,6 +1,6 @@
-import { Album } from '@/models'
+import type { Album } from '@/models'
 
-export const topAlbums2024: Album[] = [
+export default [
   {
     position: 1,
     artist: 'Darkest Hour',
@@ -252,4 +252,4 @@ export const topAlbums2024: Album[] = [
     video: 'ndf3fTN0ZL0',
     year: 2024,
   },
-]
+] satisfies Album[]

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Card, CardContent } from '@/components/ui/card'
+import { isRevealed, revealDate as getRevealDate } from '@/lib/reveal'
 import { Album } from '@/models'
 import { computed, ref } from 'vue'
 import Flag from './Flag.vue'
@@ -9,28 +10,8 @@ const props = defineProps<{
   album: Album
 }>()
 
-// the date the no.1 album will be revealed
-const topRevealDate = computed(() => new Date(props.album.year, 11, 31))
-
-// the date the current album will be revealed
-// is the topRevealDate minus the position of the album
-const revealDate = computed(() => {
-  const date = new Date(topRevealDate.value)
-  date.setDate(date.getDate() - (props.album.position - 1))
-  return date
-})
-
-// Only hide albums for the current year that haven't been revealed yet
-const hideAlbum = computed(() => {
-  if (import.meta.env.DEV) {
-    return false
-  }
-  const currentYear = new Date().getFullYear()
-  if (props.album.year !== currentYear) {
-    return false
-  }
-  return new Date() < revealDate.value
-})
+const revealDate = computed(() => getRevealDate(props.album))
+const hideAlbum = computed(() => !isRevealed(props.album))
 
 const showVideo = ref(false)
 const toggleVideo = () => {
